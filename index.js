@@ -16,6 +16,8 @@ app.use(express.static('public'))
 
 app.use('/', require('./routes/index'))
 
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`)
+const IP = "http://13.228.168.98/"
+
+app.listen(PORT, IP, () => {
+    console.log(`Server running at http://localhost:${PORT}:${IP}`)
 });
