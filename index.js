@@ -10,12 +10,8 @@ app.set("views", path.resolve("./views"))
 
 app.use(express.static('public'))
 
-// app.get('/', (req, res) => {
-//     return res.render('index')
-// })
-
 app.use('/', require('./routes/index'))
 
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`)
-});
+})
